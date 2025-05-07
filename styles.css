@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.welcome-text {
+    text-align: center;
+    font-size: 3rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.welcome-text span {
+    display: inline-block;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.welcome-text span:hover {
+    transform: translateY(-20px) rotate(10deg);
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    cursor: pointer;
+}
