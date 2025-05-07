@@ -7,6 +7,15 @@ body {
     background-color: #000;
 }
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+}
+
 .welcome-text {
     text-align: center;
     font-size: 3rem;
@@ -25,4 +34,43 @@ body {
     color: #00ffff;
     text-shadow: 0 0 10px #00ffff;
     cursor: pointer;
+}
+
+.portal-btn, .return-btn {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: transparent;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.portal-btn:hover, .return-btn:hover {
+    background: #00ffff;
+    color: #000;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.portal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, #00ffff, #007bff, #000);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.portal.active {
+    width: 200vw;
+    height: 200vw;
+    opacity: 1;
 }
