@@ -1,0 +1,261 @@
+{
+  "personal": {
+    "name": "Anish Basety",
+    "title": "Software Engineer",
+    "email": "anishbasety@gmail.com",
+    "github": "https://github.com/anishbasety",
+    "linkedin": "https://linkedin.com/in/anishbasety",
+    "website": "https://anishbasety.com",
+    "location": "Champaign, IL",
+    "summary": "Passionate software engineer with expertise in full-stack development, AI/ML, and creating innovative solutions. Currently pursuing Computer Science & Mathematics at UIUC with a focus on scalable systems and emerging technologies."
+  },
+  "experience": [
+    {
+      "position": "Software Engineer",
+      "company": "Bumpups",
+      "location": "Remote",
+      "startDate": "January 2025",
+      "endDate": "April 2025",
+      "description": "Led development of core features and optimizations for a social networking platform.",
+      "achievements": [
+        "Developed and deployed 5+ new features including real-time notifications and user engagement tools",
+        "Optimized API response times by 40% through database query optimization and caching strategies",
+        "Implemented WebSocket-based real-time notifications system serving 10,000+ concurrent users",
+        "Enhanced WCAG compliance by 95% through comprehensive accessibility improvements",
+        "Improved application performance by 60% through code splitting and lazy loading techniques"
+      ],
+      "technologies": ["React", "Node.js", "PostgreSQL", "WebSocket", "Redis", "AWS"]
+    },
+    {
+      "position": "AI/ML Engineer",
+      "company": "Outlier AI",
+      "location": "Remote",
+      "startDate": "November 2024",
+      "endDate": "Present",
+      "description": "Specialized in optimizing large language models and building scalable ML pipelines.",
+      "achievements": [
+        "Optimized LLM accuracy by 25% through fine-tuning and prompt engineering techniques",
+        "Scaled ML pipeline to handle 10+ AI models simultaneously with 99.9% uptime",
+        "Implemented JSON-based data handling system processing 1M+ daily requests",
+        "Reduced model inference time by 30% through optimization and parallel processing",
+        "Developed automated testing framework for ML models with 95% test coverage"
+      ],
+      "technologies": ["Python", "TensorFlow", "PyTorch", "FastAPI", "Docker", "Kubernetes"]
+    },
+    {
+      "position": "Software Engineering Intern",
+      "company": "Accenture",
+      "location": "Chicago, IL",
+      "startDate": "June 2023",
+      "endDate": "August 2023",
+      "description": "Contributed to enterprise software solutions and technical documentation.",
+      "achievements": [
+        "Led 20+ troubleshooting initiatives resolving critical system issues and improving reliability",
+        "Conducted usability testing on emerging products with 100+ participants",
+        "Implemented analytics-driven UX improvements resulting in 35% higher user engagement",
+        "Enhanced system performance by 45% through optimization and monitoring",
+        "Created 50+ technical documentation pieces improving team productivity by 40%"
+      ],
+      "technologies": ["Java", "Spring Boot", "React", "MongoDB", "Docker", "Jenkins"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "EcoScan",
+      "description": "AI-powered mobile application for recyclable classification and disposal guidance with gamification features.",
+      "role": "Full-Stack Developer",
+      "category": "Hackathon",
+      "startDate": "November 2024",
+      "endDate": "November 2024",
+      "achievements": [
+        "Achieved 95% accuracy in recyclable classification using computer vision",
+        "Served 200+ active users with 1,000+ daily transactions",
+        "Implemented gamification system increasing user engagement by 60%",
+        "Built SQL backend handling complex queries and data analytics"
+      ],
+      "technologies": ["Flask", "HTML/CSS", "JavaScript", "Python", "OpenAI API", "GPT-4 Turbo Mini", "SQL"],
+      "github": "https://github.com/anishbasety/ecoscan",
+      "demo": "https://ecoscan-demo.vercel.app",
+      "image": "https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=EcoScan"
+    },
+    {
+      "title": "Virtual Swimming Coach Tool",
+      "description": "Mobile application for AI-driven swimming stroke analysis and personalized training plans.",
+      "role": "Lead Developer",
+      "category": "Mobile",
+      "startDate": "February 2024",
+      "endDate": "July 2024",
+      "achievements": [
+        "Improved swim efficiency by 20% through real-time stroke analysis",
+        "Built mobile app serving 500+ active users with 30% higher retention",
+        "Developed AI-driven training plans personalized to individual performance",
+        "Implemented SQL database managing 10,000+ training sessions"
+      ],
+      "technologies": ["Python", "JavaScript", "Flutter", "SQL", "PHP", "OpenAI API"],
+      "github": "https://github.com/anishbasety/swimming-coach",
+      "demo": "https://swimming-coach-demo.vercel.app",
+      "image": "https://via.placeholder.com/400x250/10B981/FFFFFF?text=Swimming+Coach"
+    },
+    {
+      "title": "AISwimCoach",
+      "description": "Flutter-based tool for AI-driven swimming analysis and technique improvement.",
+      "role": "Developer",
+      "category": "Mobile",
+      "startDate": "March 2024",
+      "endDate": "June 2024",
+      "achievements": [
+        "Built cross-platform mobile application using Flutter",
+        "Integrated AI models for real-time swimming analysis",
+        "Implemented user progress tracking and analytics dashboard"
+      ],
+      "technologies": ["Dart", "Flutter", "TensorFlow Lite", "Firebase"],
+      "github": "https://github.com/anishbasety/aiswimcoach",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/8B5CF6/FFFFFF?text=AISwimCoach"
+    },
+    {
+      "title": "RePackr",
+      "description": "Packaging and optimization system for efficient resource management.",
+      "role": "Developer",
+      "category": "Web",
+      "startDate": "September 2024",
+      "endDate": "December 2024",
+      "achievements": [
+        "Developed Java-based backend with TypeScript frontend",
+        "Implemented optimization algorithms for resource allocation",
+        "Built comprehensive testing suite with 90% code coverage"
+      ],
+      "technologies": ["Java", "TypeScript", "Spring Boot", "React", "PostgreSQL"],
+      "github": "https://github.com/anishbasety/repackr",
+      "demo": "https://repackr-demo.vercel.app",
+      "image": "https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=RePackr"
+    },
+    {
+      "title": "dine-nearby-explorer",
+      "description": "Explorer application for discovering and reviewing nearby restaurants.",
+      "role": "Developer",
+      "category": "Web",
+      "startDate": "January 2024",
+      "endDate": "March 2024",
+      "achievements": [
+        "Built location-based restaurant discovery system",
+        "Integrated third-party APIs for restaurant data and reviews",
+        "Implemented user rating and review system"
+      ],
+      "technologies": ["TypeScript", "React", "Node.js", "MongoDB", "Google Maps API"],
+      "github": "https://github.com/anishbasety/dine-nearby-explorer",
+      "demo": "https://dine-nearby.vercel.app",
+      "image": "https://via.placeholder.com/400x250/EF4444/FFFFFF?text=Dine+Nearby"
+    },
+    {
+      "title": "Personal Website",
+      "description": "Modern, responsive personal portfolio website built with React and TypeScript.",
+      "role": "Developer",
+      "category": "Web",
+      "startDate": "January 2025",
+      "endDate": "January 2025",
+      "achievements": [
+        "Built responsive design with 95+ Lighthouse performance score",
+        "Implemented smooth animations and modern UI/UX",
+        "Integrated SEO optimization and accessibility features"
+      ],
+      "technologies": ["React", "TypeScript", "TailwindCSS", "Framer Motion", "Vite"],
+      "github": "https://github.com/anishbasety/personalwebsite",
+      "demo": "https://anishbasety.com",
+      "image": "https://via.placeholder.com/400x250/06B6D4/FFFFFF?text=Personal+Website"
+    },
+    {
+      "title": "sw-challenge-spring-2025",
+      "description": "Trading challenge repository for algorithmic trading and financial analysis.",
+      "role": "Developer",
+      "category": "Academic",
+      "startDate": "January 2025",
+      "endDate": "Present",
+      "achievements": [
+        "Forked and customized trading challenge framework",
+        "Implemented algorithmic trading strategies",
+        "Built backtesting and performance analysis tools"
+      ],
+      "technologies": ["Python", "Pandas", "NumPy", "Matplotlib", "Jupyter"],
+      "github": "https://github.com/anishbasety/sw-challenge-spring-2025",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/84CC16/FFFFFF?text=Trading+Challenge"
+    }
+  ],
+  "skills": {
+    "languages": [
+      { "name": "JavaScript", "proficiency": 95 },
+      { "name": "TypeScript", "proficiency": 90 },
+      { "name": "Python", "proficiency": 88 },
+      { "name": "Java", "proficiency": 85 },
+      { "name": "Dart", "proficiency": 80 },
+      { "name": "SQL", "proficiency": 85 },
+      { "name": "HTML/CSS", "proficiency": 90 }
+    ],
+    "frameworks": [
+      { "name": "React", "proficiency": 92 },
+      { "name": "Node.js", "proficiency": 88 },
+      { "name": "Flutter", "proficiency": 85 },
+      { "name": "Spring Boot", "proficiency": 80 },
+      { "name": "FastAPI", "proficiency": 85 },
+      { "name": "Express.js", "proficiency": 90 }
+    ],
+    "developerTools": [
+      { "name": "Git", "proficiency": 95 },
+      { "name": "Docker", "proficiency": 80 },
+      { "name": "AWS", "proficiency": 75 },
+      { "name": "Jenkins", "proficiency": 70 },
+      { "name": "Kubernetes", "proficiency": 65 },
+      { "name": "VS Code", "proficiency": 95 }
+    ],
+    "librariesTools": [
+      { "name": "TensorFlow", "proficiency": 80 },
+      { "name": "PyTorch", "proficiency": 75 },
+      { "name": "OpenAI API", "proficiency": 85 },
+      { "name": "MongoDB", "proficiency": 80 },
+      { "name": "PostgreSQL", "proficiency": 85 },
+      { "name": "Redis", "proficiency": 75 }
+    ]
+  },
+  "education": {
+    "university": "University of Illinois Urbana-Champaign",
+    "degree": "B.S. Computer Science & Mathematics",
+    "graduationDate": "May 2026",
+    "gpa": "3.8/4.0",
+    "relevantCoursework": [
+      "Data Structures and Algorithms",
+      "Computer Architecture",
+      "Linear Algebra",
+      "Statistical Economics",
+      "Machine Learning",
+      "Database Systems",
+      "Software Engineering"
+    ]
+  },
+  "awards": [
+    {
+      "title": "Dean's List",
+      "organization": "University of Illinois",
+      "date": "2023-2024",
+      "description": "Academic excellence recognition for maintaining high GPA"
+    },
+    {
+      "title": "Hackathon Winner",
+      "organization": "EcoScan Project",
+      "date": "November 2024",
+      "description": "First place for innovative AI-powered recycling solution"
+    },
+    {
+      "title": "Outstanding Intern Award",
+      "organization": "Accenture",
+      "date": "August 2023",
+      "description": "Recognition for exceptional performance and contributions"
+    }
+  ],
+  "stats": {
+    "yearsExperience": 3,
+    "projectsCompleted": 15,
+    "openSourceContributions": 25,
+    "hackathonsWon": 3
+  }
+}
