@@ -11,32 +11,24 @@ import Education from './components/Education.tsx';
 import Contact from './components/Contact.tsx';
 import Resume from './components/Resume.tsx';
 import Footer from './components/Footer.tsx';
+import resumeData from './data/resume.json';
 
 function App() {
-  const [resumeData, setResumeData] = useState<ResumeData | null>(null);
+  const [data, setData] = useState<ResumeData | null>(null);
 
   useEffect(() => {
-    const loadResumeData = async () => {
-      try {
-        const response = await fetch('/src/data/resume.json');
-        const data = await response.json();
-        setResumeData(data);
-        
-        // Update document title and meta description for SEO
-        document.title = `${data.personal.name} - ${data.personal.title}`;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute('content', data.personal.summary);
-        }
-      } catch (error) {
-        console.error('Error loading resume data:', error);
-      }
-    };
-
-    loadResumeData();
+    // Set the resume data directly since we're importing it
+    setData(resumeData as ResumeData);
+    
+    // Update document title and meta description for SEO
+    document.title = `${resumeData.personal.name} - ${resumeData.personal.title}`;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', resumeData.personal.summary);
+    }
   }, []);
 
-  if (!resumeData) {
+  if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
@@ -45,23 +37,23 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/personalwebsite">
       <div className="App">
         <Navbar />
         <Routes>
           <Route path="/" element={
             <>
-              <Hero personal={resumeData.personal} stats={resumeData.stats} />
-              <About personal={resumeData.personal} stats={resumeData.stats} />
-              <Skills skills={resumeData.skills} />
-              <Experience experience={resumeData.experience} />
-              <Projects projects={resumeData.projects} />
-              <Education education={resumeData.education} awards={resumeData.awards} />
-              <Contact personal={resumeData.personal} />
-              <Footer personal={resumeData.personal} />
+              <Hero personal={data.personal} stats={data.stats} />
+              <About personal={data.personal} stats={data.stats} />
+              <Skills skills={data.skills} />
+              <Experience experience={data.experience} />
+              <Projects projects={data.projects} />
+              <Education education={data.education} awards={data.awards} />
+              <Contact personal={data.personal} />
+              <Footer personal={data.personal} />
             </>
           } />
-          <Route path="/resume" element={<Resume resumeData={resumeData} />} />
+          <Route path="/resume" element={<Resume resumeData={data} />} />
         </Routes>
       </div>
     </Router>
