@@ -1,16 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { ResumeData } from './types';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Education from './components/Education';
-import Contact from './components/Contact';
-import Resume from './components/Resume';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import About from './components/About.tsx';
+import Skills from './components/Skills.tsx';
+import Experience from './components/Experience.tsx';
+import Projects from './components/Projects.tsx';
+import Education from './components/Education.tsx';
+import Contact from './components/Contact.tsx';
+import Resume from './components/Resume.tsx';
+import Footer from './components/Footer.tsx';
 
 function App() {
   const [resumeData, setResumeData] = useState<ResumeData | null>(null);
@@ -39,7 +39,7 @@ function App() {
   if (!resumeData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-600"></div>
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
       </div>
     );
   }

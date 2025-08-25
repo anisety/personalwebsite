@@ -2,11 +2,13 @@ export interface Personal {
   name: string;
   title: string;
   email: string;
+  phone: string;
   github: string;
   linkedin: string;
   website: string;
   location: string;
   summary: string;
+  avatar: string;
 }
 
 export interface Experience {

@@ -64,15 +64,15 @@ const Navbar = () => {
                 to={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-primary-600'
-                    : 'text-gray-700 hover:text-primary-600'
+                    ? 'text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
                 {item.name}
                 {isActive(item.href) && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
                     initial={false}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
@@ -85,7 +85,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary-600 transition-colors duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -111,8 +111,8 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
                     isActive(item.href)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                   }`}
                 >
                   {item.name}
