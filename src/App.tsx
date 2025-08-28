@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { ResumeData } from './types';
 import Navbar from './components/Navbar.tsx';
@@ -37,7 +37,7 @@ function App() {
   }
 
   return (
-    <Router basename="/personalwebsite">
+    <Router>
       <div className="App">
         <Navbar />
         <Routes>
