@@ -2,10 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 /* Tailwind CSS directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 /* Reset and base styles */
 * {
   margin: 0;
@@ -735,3 +734,4 @@ body {
   from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
   to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
 }
+
