@@ -45,38 +45,34 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
-          : 'bg-transparent'
-      }`}
+      className={`navbar-base ${isScrolled ? 'navbar-scrolled' : 'navbar-transparent'}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="navbar-container-new">
+        <div className="navbar-content-new">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="navbar-logo-link">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-extrabold text-black"
+              className="navbar-logo-text"
             >
               AB
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="navbar-desktop-menu">
             {navItems.map((item) => (
               item.href.startsWith('/#') ? (
                 <button
                   key={item.name}
                   onClick={() => handleScrollToSection(item.href.substring(2))}
-                  className={`relative px-3 py-2 text-sm font-extrabold transition-colors duration-200 ${isActive(item.href) ? 'text-blue-600' : 'text-black hover:text-blue-600'}`}
+                  className={`navbar-desktop-item ${isActive(item.href) ? 'navbar-desktop-item-active' : 'navbar-desktop-item-inactive'}`}
                 >
                   {item.name}
                   {isActive(item.href) && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
+                      className="navbar-desktop-active-indicator"
                       initial={false}
                       transition={{ type: "spring", stiffness: 500, damping: 30 }}
                     />
@@ -86,13 +82,13 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`relative px-3 py-2 text-sm font-extrabold transition-colors duration-200 ${isActive(item.href) ? 'text-blue-600' : 'text-black hover:text-blue-600'}`}
+                  className={`navbar-desktop-item ${isActive(item.href) ? 'navbar-desktop-item-active' : 'navbar-desktop-item-inactive'}`}
                 >
                   {item.name}
                   {isActive(item.href) && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
+                      className="navbar-desktop-active-indicator"
                       initial={false}
                       transition={{ type: "spring", stiffness: 500, damping: 30 }}
                     />
@@ -103,10 +99,10 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="navbar-mobile-button-wrapper">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              className="navbar-mobile-toggle-button"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -122,18 +118,17 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-200"
+            className="navbar-mobile-menu"
           >
-            <div className="px-4 py-2 space-y-1">
+            <div className="navbar-mobile-menu-items">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block px-3 py-2 text-base font-extrabold rounded-md transition-colors duration-200 ${
-                    isActive(item.href)
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-black hover:text-blue-600 hover:bg-gray-50'
+                  className={`navbar-mobile-item ${isActive(item.href)
+                    ? 'navbar-mobile-item-active'
+                    : 'navbar-mobile-item-inactive'
                   }`}
                 >
                   {item.name}
