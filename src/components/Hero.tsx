@@ -63,6 +63,7 @@ const Hero = ({ personal, stats }: HeroProps) => {
                   repeat={Infinity}
                 />
               </div>
+              <p className="text-lg text-yellow-400 font-semibold">⚠️ Still in building process. Will be ready soon🚀</p>
             </div>
 
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
