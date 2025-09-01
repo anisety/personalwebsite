@@ -174,9 +174,7 @@ const Hero = ({ personal, stats }: HeroProps) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
-                <Cube />
-            </div>
+            <Cube />
           </motion.div>
         </div>
       </div>
