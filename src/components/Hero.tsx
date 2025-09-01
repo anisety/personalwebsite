@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Download, Mail, Linkedin, Github, ExternalLink } from 'lucide-react';
+import Cube from './Cube'; // Import the new Cube component
 
 interface Personal {
   name: string;
@@ -173,23 +174,12 @@ const Hero = ({ personal, stats }: HeroProps) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
-                <div className="w-full h-full rounded-full bg-slate-900 p-2">
-                  <img
-                    src={personal.avatar}
-                    alt={personal.name}
-                    className="w-full h-full rounded-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = 'https://via.placeholder.com/400x400/6366f1/ffffff?text=' + personal.name.charAt(0);
-                    }}
-                  />
-                </div>
-              </div>
-              
-              {/* Floating elements */}
-              <motion.div
+            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
+                <Cube />
+            </div>
+
+            {/* Floating elements */}
+            <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 3, repeat: Infinity }}
                 className="absolute -top-4 -right-4 w-16 h-16 bg-purple-500 rounded-full opacity-20"
@@ -199,7 +189,6 @@ const Hero = ({ personal, stats }: HeroProps) => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute -bottom-4 -left-4 w-12 h-12 bg-pink-500 rounded-full opacity-20"
               />
-            </div>
           </motion.div>
         </div>
       </div>
