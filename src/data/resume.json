@@ -12,8 +12,8 @@
     "summary": "Passionate software engineer with expertise in full-stack development, AI/ML, and creating innovative solutions. Currently pursuing Computer Science & Mathematics at UIUC with a focus on scalable systems and emerging technologies."
   },
   "experience": [
-    {
-      "position": "Software Engineer",
+    { 
+      "position": "Software Engineer Intern",
       "company": "Bumpups",
       "location": "Remote",
       "startDate": "January 2025",
@@ -45,7 +45,7 @@
       "technologies": ["Python", "TensorFlow", "PyTorch", "FastAPI", "Docker", "Kubernetes"]
     },
     {
-      "position": "Software Engineering Intern",
+      "position": "Research Assistant",
       "company": "Accenture",
       "location": "Chicago, IL",
       "startDate": "June 2023",
