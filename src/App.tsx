@@ -9,7 +9,6 @@ import Experience from './components/Experience.tsx';
 import Projects from './components/Projects.tsx';
 import Education from './components/Education.tsx';
 import Contact from './components/Contact.tsx';
-import Resume from './components/Resume.tsx';
 import Footer from './components/Footer.tsx';
 import resumeData from './data/resume.json';
 
@@ -53,7 +52,6 @@ function App() {
               <Footer personal={data.personal} />
             </>
           } />
-          <Route path="/resume" element={<Resume resumeData={data} />} />
         </Routes>
       </div>
     </Router>
