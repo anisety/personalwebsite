@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../style.css'; // Import the CSS file for cube styling
 
 const Cube = () => {
