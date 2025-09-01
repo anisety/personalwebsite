@@ -133,11 +133,11 @@ const Education = ({ education, awards }: EducationProps) => {
         >
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">3.8</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">4.0</div>
               <div className="text-gray-600">GPA</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600 mb-2">2026</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">2027</div>
               <div className="text-gray-600">Graduation Year</div>
             </div>
             <div>
