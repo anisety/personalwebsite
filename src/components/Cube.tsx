@@ -3,6 +3,21 @@ import '../style.css'; // Import the CSS file for cube styling
 
 const Cube = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const roles = [
+    "Full-Stack Developer",
+    "Frontend Engineer",
+    "Backend Engineer",
+    "DevOps Engineer",
+    "ML Engineer",
+    "AI Engineer",
+    "Software Engineer",
+    "Data Engineer",
+  ];
+
+  const getRandomRole = () => {
+    const randomIndex = Math.floor(Math.random() * roles.length);
+    return roles[randomIndex];
+  };
 
   return (
     <div
@@ -11,12 +26,12 @@ const Cube = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className={`cube ${isHovered ? 'cube-hover' : ''}`}>
-        <div className="face front"></div>
-        <div className="face back"></div>
-        <div className="face right"></div>
-        <div className="face left"></div>
-        <div className="face top"></div>
-        <div className="face bottom"></div>
+        <div className="face front">{getRandomRole()}</div>
+        <div className="face back">{getRandomRole()}</div>
+        <div className="face right">{getRandomRole()}</div>
+        <div className="face left">{getRandomRole()}</div>
+        <div className="face top">{getRandomRole()}</div>
+        <div className="face bottom">{getRandomRole()}</div>
       </div>
     </div>
   );

@@ -177,18 +177,6 @@ const Hero = ({ personal, stats }: HeroProps) => {
             <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
                 <Cube />
             </div>
-
-            {/* Floating elements */}
-            <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-4 w-16 h-16 bg-purple-500 rounded-full opacity-20"
-              />
-              <motion.div
-                animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -bottom-4 -left-4 w-12 h-12 bg-pink-500 rounded-full opacity-20"
-              />
           </motion.div>
         </div>
       </div>
