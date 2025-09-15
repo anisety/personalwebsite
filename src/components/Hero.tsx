@@ -104,29 +104,6 @@ const Hero = ({ personal, stats }: HeroProps) => {
               </motion.div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="hero-cta-buttons">
-              <motion.a
-                href="/resume"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="hero-cta-button-primary"
-              >
-                <Download size={20} />
-                View Resume
-              </motion.a>
-              
-              <motion.a
-                href={`mailto:${personal.email}`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="hero-cta-button-secondary"
-              >
-                <Mail size={20} />
-                Contact Me
-              </motion.a>
-            </div>
-
             {/* Social Links */}
             <div className="footer-social-links">
               {personal.linkedin && (
@@ -150,18 +127,6 @@ const Hero = ({ personal, stats }: HeroProps) => {
                   className="hero-social-link"
                 >
                   <Github size={24} />
-                </motion.a>
-              )}
-              
-              {personal.website && (
-                <motion.a
-                  href={personal.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className="hero-social-link"
-                >
-                  <ExternalLink size={24} />
                 </motion.a>
               )}
             </div>

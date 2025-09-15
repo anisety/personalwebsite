@@ -122,17 +122,30 @@ const Navbar = () => {
           >
             <div className="navbar-mobile-menu-items">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`navbar-mobile-item ${isActive(item.href)
-                    ? 'navbar-mobile-item-active'
-                    : 'navbar-mobile-item-inactive'
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                item.href.startsWith('/#') || item.href === '/' ? (
+                  <button
+                    key={item.name}
+                    onClick={() => handleScrollToSection(item.href === '/' ? 'hero' : item.href.substring(2))}
+                    className={`navbar-mobile-item ${isActive(item.href)
+                      ? 'navbar-mobile-item-active'
+                      : 'navbar-mobile-item-inactive'
+                      }`}
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`navbar-mobile-item ${isActive(item.href)
+                      ? 'navbar-mobile-item-active'
+                      : 'navbar-mobile-item-inactive'
+                      }`}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
             </div>
           </motion.div>
