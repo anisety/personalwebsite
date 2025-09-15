@@ -126,7 +126,7 @@ const Experience = ({ experience }: ExperienceProps) => {
               I'm always interested in exciting new projects and opportunities to work with innovative teams.
             </p>
             <a
-              href="#contact"
+              href="/#contact"
               className="experience-cta-button"
             >
               Get In Touch
