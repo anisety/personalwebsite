@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { Download, Mail, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { Linkedin, Github } from 'lucide-react';
 import Cube from './Cube'; // Import the new Cube components
 
 interface Personal {
@@ -30,7 +30,7 @@ interface HeroProps {
 
 const Hero = ({ personal, stats }: HeroProps) => {
   return (
-    <section className="hero-section-new">
+    <section id="hero" className="hero-section-new">
       <div className="about-container hero-container-padding">
         <div className="hero-grid">
           {/* Left Column - Text Content */}
