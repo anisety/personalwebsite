@@ -151,7 +151,7 @@
   "projects": [
     {
       "title": "EcoScan",
-      "description": "AI-powered mobile application for recyclable classification and disposal guidance with gamification features.",
+      "description": "AI-powered mobile application for recyclable classification and disposal guidance with gamification features. EcoScan is a web application that helps users recycle more effectively. Simply upload an image of an item, and EcoScan will identify the object and provide you with instructions on how to recycle it properly.",
       "role": "Full-Stack Developer",
       "category": "Hackathon",
       "startDate": "November 2024",
@@ -160,12 +160,208 @@
         "Achieved 95% accuracy in recyclable classification using computer vision",
         "Served 200+ active users with 1,000+ daily transactions",
         "Implemented gamification system increasing user engagement by 60%",
-        "Built SQL backend handling complex queries and data analytics"
+        "Built SQL backend handling complex queries and data analytics",
+        "Developed an intuitive web interface for image upload and information display"
       ],
-      "technologies": ["Flask", "HTML/CSS", "JavaScript", "Python", "OpenAI API", "GPT-4 Turbo Mini", "SQL"],
-      "github": "https://github.com/anishbasety/ecoscan",
+      "technologies": ["Flask", "HTML/CSS", "JavaScript", "Python", "OpenAI API", "GPT-4 Turbo Mini", "SQL", "Computer Vision"],
+      "github": "https://github.com/anisety/EcoScan",
       "demo": "https://ecoscan-demo.vercel.app",
       "image": "https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=EcoScan"
+    },
+    {
+      "title": "AlgoverseResearch",
+      "description": "This project is a replication of a study on Uncertainty Estimation using Kullback-Leibler (KL) Divergence in machine learning models.",
+      "role": "Researcher",
+      "category": "Research",
+      "startDate": "June 2025",
+      "endDate": "Present",
+      "achievements": [
+        "Replicated a study on Uncertainty Estimation using Kullback-Leibler (KL) Divergence in machine learning models.",
+        "Analyzed and interpreted complex machine learning model uncertainties.",
+        "Contributed to understanding and improving model reliability."
+      ],
+      "technologies": ["Python", "Machine Learning", "Kullback-Leibler Divergence", "Uncertainty Estimation", "Data Analysis"],
+      "github": "https://github.com/anisety/AlgoverseResearch",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/FF5733/FFFFFF?text=AlgoverseResearch"
+    },
+    {
+      "title": "pulse",
+      "description": "Pulse is a web application designed to provide real-time data visualization and analysis. It features a React-based frontend that communicates with a powerful Python backend capable of performing complex data processing, including Natural Language Processing (NLP) tasks.",
+      "role": "Full-Stack Developer",
+      "category": "Web",
+      "startDate": "September 2024",
+      "endDate": "Present",
+      "achievements": [
+        "Developed a React-based frontend for real-time data visualization.",
+        "Implemented a Python backend for complex data processing and Natural Language Processing (NLP) tasks.",
+        "Designed and integrated real-time data streaming capabilities for dynamic insights.",
+        "Enhanced user experience through intuitive data presentation and interactive controls."
+      ],
+      "technologies": ["JavaScript", "React", "Python", "FastAPI", "NLP", "Data Visualization", "WebSockets"],
+      "github": "https://github.com/anisety/pulse",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/007BFF/FFFFFF?text=Pulse"
+    },
+    {
+      "title": "Cognate",
+      "description": "An AI-powered, personalized learning ecosystem for adaptive study, career coaching, neurodiverse optimization, and global peer-learning.",
+      "role": "AI Architect",
+      "category": "AI/Education",
+      "startDate": "August 2024",
+      "endDate": "Present",
+      "achievements": [
+        "Designed and implemented an AI-powered personalized learning ecosystem.",
+        "Developed adaptive study modules and career coaching functionalities.",
+        "Optimized learning paths for neurodiverse users.",
+        "Facilitated global peer-learning interactions through integrated features."
+      ],
+      "technologies": ["Python", "Artificial Intelligence", "Machine Learning", "Adaptive Learning", "Educational Technology", "Personalization"],
+      "github": "https://github.com/anisety/Cognate",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/6C757D/FFFFFF?text=Cognate"
+    },
+    {
+      "title": "AISwimCoach",
+      "description": "AI Swim Coach is a mobile application that uses artificial intelligence to analyze your swimming technique and provide personalized feedback to help you improve. Flutter-based tool for AI-driven swimming analysis and technique improvement.",
+      "role": "Developer",
+      "category": "Mobile",
+      "startDate": "March 2024",
+      "endDate": "June 2024",
+      "achievements": [
+        "Built cross-platform mobile application using Flutter",
+        "Integrated AI models for real-time swimming analysis",
+        "Implemented user progress tracking and analytics dashboard",
+        "Provided personalized feedback to improve swimming technique"
+      ],
+      "technologies": ["Dart", "Flutter", "TensorFlow Lite", "Firebase", "AI/ML"],
+      "github": "https://github.com/anisety/AISwimCoach",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/8B5CF6/FFFFFF?text=AISwimCoach"
+    },
+    {
+      "title": "dine-nearby-explorer",
+      "description": "This project is a web application that helps users find restaurants nearby. It is built with Vite, React, TypeScript, and Shadcn UI. Explorer application for discovering and reviewing nearby restaurants.",
+      "role": "Developer",
+      "category": "Web",
+      "startDate": "January 2024",
+      "endDate": "March 2024",
+      "achievements": [
+        "Built location-based restaurant discovery system",
+        "Integrated third-party APIs for restaurant data and reviews",
+        "Implemented user rating and review system",
+        "Utilized modern frontend technologies (Vite, React, TypeScript, Shadcn UI) for a responsive and engaging user experience"
+      ],
+      "technologies": ["TypeScript", "React", "Node.js", "MongoDB", "Google Maps API", "Vite", "Shadcn UI"],
+      "github": "https://github.com/anisety/dine-nearby-explorer",
+      "demo": "https://dine-nearby.vercel.app",
+      "image": "https://via.placeholder.com/400x250/EF4444/FFFFFF?text=Dine+Nearby"
+    },
+    {
+      "title": "CarbonMarketTycoon",
+      "description": "A Unity & C# simulation game about climate economics, sustainability, and corporate decision-making.",
+      "role": "Game Developer",
+      "category": "Game Development",
+      "startDate": "October 2024",
+      "endDate": "Present",
+      "achievements": [
+        "Developed a simulation game in Unity exploring climate economics and sustainability.",
+        "Implemented complex corporate decision-making mechanics and economic models.",
+        "Designed engaging gameplay scenarios related to environmental impact and resource management.",
+        "Utilized C# for game logic and interaction scripting."
+      ],
+      "technologies": ["C#", "Unity", "Game Development", "Simulation", "Economics", "Sustainability"],
+      "github": "https://github.com/anisety/CarbonMarketTycoon",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/28A745/FFFFFF?text=CarbonMarketTycoon"
+    },
+    {
+      "title": "SafeLens",
+      "description": "AI-powered content safety, harmful content filtering, and compliance monitoring. This repository contains the source code for SafeLens, a platform for real-time content moderation using AI. It includes a Python backend powered by FastAPI and a pre-trained NLP model, along with a modern React frontend.",
+      "role": "Full-Stack AI Developer",
+      "category": "AI/Web",
+      "startDate": "July 2024",
+      "endDate": "Present",
+      "achievements": [
+        "Developed an AI-powered platform for real-time content moderation and harmful content filtering.",
+        "Implemented a Python backend with FastAPI and a pre-trained NLP model for robust content analysis.",
+        "Built a modern React frontend for intuitive compliance monitoring and user interaction.",
+        "Ensured content safety and regulatory compliance through advanced AI techniques."
+      ],
+      "technologies": ["Python", "FastAPI", "NLP", "React", "JavaScript", "Artificial Intelligence", "Content Moderation"],
+      "github": "https://github.com/anisety/SafeLens",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/DC3545/FFFFFF?text=SafeLens"
+    },
+    {
+      "title": "manuvo",
+      "description": "Real-time ASL recognition, gesture interpretation, and accessibility intelligence. Manuvo is a modular AI-powered platform that recognizes American Sign Language (ASL) in real-time, provides feedback for learners, and enables accessible communication across personal, educational, and emergency contexts. Its core engine is built for image recognition, AWS Lambda serverless processing, responsive web/mobile layouts, mobile/iOS support, and real-time feedback, with extensions for creative spin-off applications.",
+      "role": "AI/Mobile Developer",
+      "category": "AI/Accessibility",
+      "startDate": "May 2024",
+      "endDate": "Present",
+      "achievements": [
+        "Developed a modular AI platform for real-time American Sign Language (ASL) recognition.",
+        "Implemented gesture interpretation and provided real-time feedback for learners.",
+        "Designed for responsive web/mobile layouts with iOS support and AWS Lambda serverless processing.",
+        "Enabled accessible communication across personal, educational, and emergency contexts."
+      ],
+      "technologies": ["Python", "Artificial Intelligence", "Image Recognition", "AWS Lambda", "Mobile Development", "Accessibility", "ASL"],
+      "github": "https://github.com/anisety/manuvo",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/6610F2/FFFFFF?text=Manuvo"
+    },
+    {
+      "title": "RePackr",
+      "description": "Packaging and optimization system for efficient resource management.",
+      "role": "Developer",
+      "category": "Web",
+      "startDate": "September 2024",
+      "endDate": "December 2024",
+      "achievements": [
+        "Developed Java-based backend with TypeScript frontend",
+        "Implemented optimization algorithms for resource allocation",
+        "Built comprehensive testing suite with 90% code coverage"
+      ],
+      "technologies": ["Java", "TypeScript", "Spring Boot", "React", "PostgreSQL"],
+      "github": "https://github.com/anisety/repackr",
+      "demo": "https://repackr-demo.vercel.app",
+      "image": "https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=RePackr"
+    },
+    {
+      "title": "RePackr-dev",
+      "description": "Welcome to AI Moving Helper, your intelligent assistant for managing every aspect of a residential move — from packing to internet transfer, address updates, and furniture fitting. This tool empowers users to efficiently plan their move while maintaining visibility over key steps and logistics.",
+      "role": "Developer",
+      "category": "Web/AI",
+      "startDate": "July 2024",
+      "endDate": "Present",
+      "achievements": [
+        "Developed an intelligent assistant to manage residential moves, including packing, internet transfer, and address updates.",
+        "Empowered users to efficiently plan and maintain visibility over key logistics steps.",
+        "Implemented AI-driven features to streamline the moving process.",
+        "Designed a user-friendly interface for comprehensive move management."
+      ],
+      "technologies": ["TypeScript", "React", "Node.js", "AI", "Logistics", "Project Management"],
+      "github": "https://github.com/anisety/RePackr-dev",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/FD7E14/FFFFFF?text=RePackr-dev"
+    },
+    {
+      "title": "sw-challenge-spring-2025",
+      "description": "Trading challenge repository for algorithmic trading and financial analysis.",
+      "role": "Developer",
+      "category": "Academic",
+      "startDate": "January 2025",
+      "endDate": "Present",
+      "achievements": [
+        "Forked and customized trading challenge framework",
+        "Implemented algorithmic trading strategies",
+        "Built backtesting and performance analysis tools"
+      ],
+      "technologies": ["Python", "Pandas", "NumPy", "Matplotlib", "Jupyter"],
+      "github": "https://github.com/anisety/sw-challenge-spring-2025",
+      "demo": null,
+      "image": "https://via.placeholder.com/400x250/84CC16/FFFFFF?text=Trading+Challenge"
     },
     {
       "title": "Virtual Swimming Coach Tool",
@@ -186,57 +382,6 @@
       "image": "https://via.placeholder.com/400x250/10B981/FFFFFF?text=Swimming+Coach"
     },
     {
-      "title": "AISwimCoach",
-      "description": "Flutter-based tool for AI-driven swimming analysis and technique improvement.",
-      "role": "Developer",
-      "category": "Mobile",
-      "startDate": "March 2024",
-      "endDate": "June 2024",
-      "achievements": [
-        "Built cross-platform mobile application using Flutter",
-        "Integrated AI models for real-time swimming analysis",
-        "Implemented user progress tracking and analytics dashboard"
-      ],
-      "technologies": ["Dart", "Flutter", "TensorFlow Lite", "Firebase"],
-      "github": "https://github.com/anishbasety/aiswimcoach",
-      "demo": null,
-      "image": "https://via.placeholder.com/400x250/8B5CF6/FFFFFF?text=AISwimCoach"
-    },
-    {
-      "title": "RePackr",
-      "description": "Packaging and optimization system for efficient resource management.",
-      "role": "Developer",
-      "category": "Web",
-      "startDate": "September 2024",
-      "endDate": "December 2024",
-      "achievements": [
-        "Developed Java-based backend with TypeScript frontend",
-        "Implemented optimization algorithms for resource allocation",
-        "Built comprehensive testing suite with 90% code coverage"
-      ],
-      "technologies": ["Java", "TypeScript", "Spring Boot", "React", "PostgreSQL"],
-      "github": "https://github.com/anishbasety/repackr",
-      "demo": "https://repackr-demo.vercel.app",
-      "image": "https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=RePackr"
-    },
-    {
-      "title": "dine-nearby-explorer",
-      "description": "Explorer application for discovering and reviewing nearby restaurants.",
-      "role": "Developer",
-      "category": "Web",
-      "startDate": "January 2024",
-      "endDate": "March 2024",
-      "achievements": [
-        "Built location-based restaurant discovery system",
-        "Integrated third-party APIs for restaurant data and reviews",
-        "Implemented user rating and review system"
-      ],
-      "technologies": ["TypeScript", "React", "Node.js", "MongoDB", "Google Maps API"],
-      "github": "https://github.com/anishbasety/dine-nearby-explorer",
-      "demo": "https://dine-nearby.vercel.app",
-      "image": "https://via.placeholder.com/400x250/EF4444/FFFFFF?text=Dine+Nearby"
-    },
-    {
       "title": "Personal Website",
       "description": "Modern, responsive personal portfolio website built with React and TypeScript.",
       "role": "Developer",
@@ -249,26 +394,9 @@
         "Integrated SEO optimization and accessibility features"
       ],
       "technologies": ["React", "TypeScript", "TailwindCSS", "Framer Motion", "Vite"],
-      "github": "https://github.com/anishbasety/personalwebsite",
+      "github": "https://github.com/anisety/personalwebsite",
       "demo": "https://anishbasety.com",
       "image": "https://via.placeholder.com/400x250/06B6D4/FFFFFF?text=Personal+Website"
-    },
-    {
-      "title": "sw-challenge-spring-2025",
-      "description": "Trading challenge repository for algorithmic trading and financial analysis.",
-      "role": "Developer",
-      "category": "Academic",
-      "startDate": "January 2025",
-      "endDate": "Present",
-      "achievements": [
-        "Forked and customized trading challenge framework",
-        "Implemented algorithmic trading strategies",
-        "Built backtesting and performance analysis tools"
-      ],
-      "technologies": ["Python", "Pandas", "NumPy", "Matplotlib", "Jupyter"],
-      "github": "https://github.com/anishbasety/sw-challenge-spring-2025",
-      "demo": null,
-      "image": "https://via.placeholder.com/400x250/84CC16/FFFFFF?text=Trading+Challenge"
     }
   ],
   "skills": {
