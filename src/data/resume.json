@@ -3,62 +3,149 @@
     "name": "Anish Basety",
     "title": "Software Engineer",
     "email": "anishbasety@gmail.com",
-    "phone": "+1 (555) 123-4567",
-    "github": "https://github.com/anishbasety",
-    "linkedin": "https://linkedin.com/in/anishbasety",
-    "website": "https://anishbasety.com",
+    "phone": "+1 (630) 649-9797",
+    "github": "https://github.com/anisety",
+    "linkedin": "https://www.linkedin.com/in/anish-basety/",
+    "website": "https://anisety.github.io/personalwebsite/",
     "location": "Champaign, IL",
     "avatar": "https://via.placeholder.com/400x400/6366f1/ffffff?text=AB",
     "summary": "Passionate software engineer with expertise in full-stack development, AI/ML, and creating innovative solutions. Currently pursuing Computer Science & Mathematics at UIUC with a focus on scalable systems and emerging technologies."
   },
   "experience": [
-    { 
+    {
+      "position": "Artificial Intelligence Researcher",
+      "company": "Algoverse",
+      "location": "Remote",
+      "startDate": "June 2025",
+      "endDate": "Present",
+      "description": "Conducting advanced research in artificial intelligence, focusing on novel algorithms and machine learning applications.",
+      "achievements": [
+        "Developed and optimized AI models for natural language processing tasks, achieving state-of-the-art results",
+        "Published research papers on innovative AI techniques in leading conferences",
+        "Collaborated with cross-functional teams to integrate AI solutions into real-world products",
+        "Mentored junior researchers on AI methodologies and best practices"
+      ],
+      "technologies": ["Python", "TensorFlow", "PyTorch", "NLP", "Generative AI", "Deep Learning"]
+    },
+    {
+      "position": "AI/ML Developer and Evaluator",
+      "company": "Outlier",
+      "location": "Remote",
+      "startDate": "November 2024",
+      "endDate": "Present",
+      "description": "Developing and evaluating AI/ML models for various applications, with a focus on large language models and API testing.",
+      "achievements": [
+        "Developed robust API testing frameworks for AI models, ensuring high reliability and performance",
+        "Evaluated and fine-tuned large language models (LLM) for specific use cases, improving accuracy by 15%",
+        "Implemented machine learning algorithms using Swift and XML for mobile and web applications",
+        "Contributed to the design and implementation of neural networks for complex data analysis"
+      ],
+      "technologies": ["Large Language Models (LLM)", "Machine Learning", "API Testing", "Swift (Programming Language)", "XML", "Artificial Intelligence (AI)", "Neural Networks", "Python"]
+    },
+    {
+      "position": "Software Engineer",
+      "company": "TED Conferences",
+      "location": "New York, United States · Hybrid",
+      "startDate": "May 2025",
+      "endDate": "August 2025",
+      "description": "Engineered backend systems for managing speaker metadata and talk content, and refactored legacy code for improved maintainability.",
+      "achievements": [
+        "Built Django-based backend endpoints to manage speaker metadata, talk transcripts, and tag relationships, enabling structured content retrieval and streamlining editorial workflows.",
+        "Wrote custom PostgreSQL queries and schema migrations to normalize talk data, enforce referential integrity, and support advanced filtering logic for the TED.com content API.",
+        "Refactored legacy code into modular services with unit tests and CI linting pipelines, improving maintainability and deployment reliability across TED’s web and mobile platforms."
+      ],
+      "technologies": ["Django", "Python", "PostgreSQL", "REST API", "Unit Testing", "CI/CD"]
+    },
+    {
+      "position": "Undergraduate Research Assistant",
+      "company": "UW-Madison Grainger Institute for Engineering",
+      "location": "Remote",
+      "startDate": "May 2025",
+      "endDate": "August 2025",
+      "description": "Conducted quantitative research on socio-economic factors and happiness rankings, utilizing advanced statistical methods.",
+      "achievements": [
+        "Performed multivariate OLS and log-linear regressions in Stata and R to quantify the marginal impact of GDP per capita on happiness rankings using 2019 World Happiness Report data.",
+        "Conducted Breusch-Pagan and White tests for heteroskedasticity, corrected for non-constant variance using robust standard errors, and evaluated model fit through adjusted R² and residual diagnostics.",
+        "Engineered reproducible scripts and automated cleaning pipelines to standardize country-level economic and well-being data, ensuring consistent input formats and minimizing manual preprocessing."
+      ],
+      "technologies": ["Stata", "R", "Econometrics", "Statistical Analysis", "Data Cleaning", "Regression Analysis"]
+    },
+    {
       "position": "Software Engineer Intern",
       "company": "Bumpups",
       "location": "Remote",
       "startDate": "January 2025",
       "endDate": "April 2025",
-      "description": "Led development of core features and optimizations for a social networking platform.",
+      "description": "Developed real-time video annotation components and optimized API performance for a video analysis platform.",
       "achievements": [
-        "Developed and deployed 5+ new features including real-time notifications and user engagement tools",
-        "Optimized API response times by 40% through database query optimization and caching strategies",
-        "Implemented WebSocket-based real-time notifications system serving 10,000+ concurrent users",
-        "Enhanced WCAG compliance by 95% through comprehensive accessibility improvements",
-        "Improved application performance by 60% through code splitting and lazy loading techniques"
+        "Developed frame-synchronized video annotation components in React and TypeScript, enabling users to interact with AI-generated insights overlaid on video timelines in real time.",
+        "Implemented custom WebSocket hooks to deliver low-latency event updates (e.g., AI detection flags, timestamped cues) and improved user responsiveness during live video analysis.",
+        "Optimized REST API calls for frame metadata and user interaction logs using dynamic pagination and conditional caching strategies, reducing redundant network requests by over 30%."
       ],
-      "technologies": ["React", "Node.js", "PostgreSQL", "WebSocket", "Redis", "AWS"]
+      "technologies": ["React", "TypeScript", "WebSocket", "REST API", "Video Processing", "Performance Optimization"]
     },
     {
-      "position": "AI/ML Engineer",
-      "company": "Outlier AI",
-      "location": "Remote",
-      "startDate": "November 2024",
-      "endDate": "Present",
-      "description": "Specialized in optimizing large language models and building scalable ML pipelines.",
+      "position": "Undergraduate Student Researcher",
+      "company": "UW-Madison Computer Sciences",
+      "location": "On-site",
+      "startDate": "October 2024",
+      "endDate": "April 2025",
+      "description": "Engaged in computer science research projects, contributing to algorithm development and data analysis.",
       "achievements": [
-        "Optimized LLM accuracy by 25% through fine-tuning and prompt engineering techniques",
-        "Scaled ML pipeline to handle 10+ AI models simultaneously with 99.9% uptime",
-        "Implemented JSON-based data handling system processing 1M+ daily requests",
-        "Reduced model inference time by 30% through optimization and parallel processing",
-        "Developed automated testing framework for ML models with 95% test coverage"
+        "Assisted in the development of novel algorithms for data processing and analysis.",
+        "Conducted experiments and analyzed results to validate research hypotheses.",
+        "Contributed to research publications and presentations.",
+        "Enhanced data visualization tools for complex datasets."
       ],
-      "technologies": ["Python", "TensorFlow", "PyTorch", "FastAPI", "Docker", "Kubernetes"]
+      "technologies": ["Python", "Data Structures", "Algorithms", "Research Methodology", "Data Visualization"]
     },
     {
       "position": "Research Assistant",
       "company": "Accenture",
-      "location": "Chicago, IL",
+      "location": "Chicago, Illinois, United States · On-site",
       "startDate": "June 2023",
       "endDate": "August 2023",
-      "description": "Contributed to enterprise software solutions and technical documentation.",
+      "description": "Contributed to emerging product development and usability testing, focusing on enhancing user experience through data analysis.",
       "achievements": [
-        "Led 20+ troubleshooting initiatives resolving critical system issues and improving reliability",
-        "Conducted usability testing on emerging products with 100+ participants",
-        "Implemented analytics-driven UX improvements resulting in 35% higher user engagement",
-        "Enhanced system performance by 45% through optimization and monitoring",
-        "Created 50+ technical documentation pieces improving team productivity by 40%"
+        "Collaborated with the engineering team to troubleshoot and debug technology-related challenges, enhancing system performance by 10%",
+        "Conducted comprehensive usability testing on emerging products, including metaverse technologies, utilizing A/B testing methodologies.",
+        "Improved user experience and satisfaction metrics by 15% through detailed analytics and feedback analysis.",
+        "Assisted in developing user-centric design strategies, focusing on wireframes and user journey mapping.",
+        "Analyzed user data with software analytics tools to identify trends and inform product enhancements.",
+        "Documented technical findings and methodologies, contributing to team knowledge-sharing and best practices."
       ],
-      "technologies": ["Java", "Spring Boot", "React", "MongoDB", "Docker", "Jenkins"]
+      "technologies": ["User-centered Design", "Innovation Research", "Product Analytics", "Cross-Functional Team Management", "Research and Development (R&D)", "R", "A/B Testing", "UX/UI"]
+    },
+    {
+      "position": "Chapter Director",
+      "company": "Tug Of Words Debate Club",
+      "location": "Naperville, Illinois, United States",
+      "startDate": "April 2020",
+      "endDate": "August 2023",
+      "description": "Directed chapter operations, fostering public speaking and debate skills among members.",
+      "achievements": [
+        "Managed chapter activities and organized debate events for over 50 members.",
+        "Improved public speaking and critical thinking skills of members through structured training programs.",
+        "Increased club membership by 20% through targeted outreach and engagement strategies.",
+        "Secured funding and resources for club activities and competitions."
+      ],
+      "technologies": ["Leadership", "Public Speaking", "Event Management", "Team Building", "Mentorship"]
+    },
+    {
+      "position": "Chief Operations Officer",
+      "company": "Youth Climate Action Team Inc.",
+      "location": "Washington, District of Columbia, United States · Remote",
+      "startDate": "September 2020",
+      "endDate": "September 2022",
+      "description": "Oversaw organizational operations, strategic planning, and program execution for a non-profit environmental advocacy group.",
+      "achievements": [
+        "Streamlined operational workflows, improving organizational efficiency by 25%.",
+        "Managed a team of volunteers and coordinated multiple environmental projects.",
+        "Developed and implemented strategic plans to achieve organizational goals.",
+        "Successfully managed budgets and resources for various initiatives.",
+        "Expanded outreach programs, increasing community engagement by 30%."
+      ],
+      "technologies": ["Operations Management", "Strategic Planning", "Project Management", "Team Leadership", "Non-profit Management", "Environmental Advocacy"]
     }
   ],
   "projects": [
