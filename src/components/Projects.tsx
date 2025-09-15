@@ -11,7 +11,6 @@ interface Project {
   technologies: string[];
   github: string;
   demo: string | null;
-  image: string;
 }
 
 interface ProjectsProps {
@@ -56,13 +55,9 @@ const Projects = ({ projects }: ProjectsProps) => {
               viewport={{ once: true }}
               className="project-card-new"
             >
-              {/* Project Image */}
-              <div className="project-image-container">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image-img"
-                />
+              {/* Project Title as Image Placeholder */}
+              <div className="project-image-container project-title-image-placeholder">
+                <h3 className="project-image-title-text">{project.title}</h3>
                 <div className="project-category-tag-wrapper">
                   <span className={`project-category-tag ${getCategoryColor(project.category)}`}>
                     {project.category}

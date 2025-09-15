@@ -154,7 +154,7 @@ const Footer = ({ personal }: FooterProps) => {
               © {currentYear} {personal.name}. All rights reserved.
             </p>
             <p className="footer-tech-stack">
-              Built with ❤️ using React, TypeScript & CSS
+              Built from scratch 
             </p>
           </div>
         </motion.div>

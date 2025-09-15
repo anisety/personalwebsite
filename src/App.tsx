@@ -1,16 +1,25 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { ResumeData } from './types';
 import Navbar from './components/Navbar.tsx';
-import Hero from './components/Hero.tsx';
-import About from './components/About.tsx';
-import Skills from './components/Skills.tsx';
-import Experience from './components/Experience.tsx';
-import Projects from './components/Projects.tsx';
-import Education from './components/Education.tsx';
-import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
 import resumeData from './data/resume.json';
+
+const LazyHero = lazy(() => import('./components/Hero.tsx'));
+const LazyAbout = lazy(() => import('./components/About.tsx'));
+const LazySkills = lazy(() => import('./components/Skills.tsx'));
+const LazyExperience = lazy(() => import('./components/Experience.tsx'));
+const LazyProjects = lazy(() => import('./components/Projects.tsx'));
+const LazyEducation = lazy(() => import('./components/Education.tsx'));
+const LazyContact = lazy(() => import('./components/Contact.tsx'));
+
+function LoadingFallback() {
+  return (
+    <div className="loading-container">
+      <div className="spinner"></div>
+    </div>
+  );
+}
 
 function App() {
   const [data, setData] = useState<ResumeData | null>(null);
@@ -41,16 +50,16 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={
-            <>
-              <Hero personal={data.personal} stats={data.stats} />
-              <About personal={data.personal} stats={data.stats} />
-              <Skills skills={data.skills} />
-              <Experience experience={data.experience} />
-              <Projects projects={data.projects} />
-              <Education education={data.education} awards={data.awards} />
-              <Contact personal={data.personal} />
+            <Suspense fallback={<LoadingFallback />}>
+              <LazyHero personal={data.personal} stats={data.stats} />
+              <LazyAbout personal={data.personal} stats={data.stats} />
+              <LazySkills skills={data.skills} />
+              <LazyExperience experience={data.experience} />
+              <LazyProjects projects={data.projects} />
+              <LazyEducation education={data.education} awards={data.awards} />
+              <LazyContact personal={data.personal} />
               <Footer personal={data.personal} />
-            </>
+            </Suspense>
           } />
         </Routes>
       </div>
