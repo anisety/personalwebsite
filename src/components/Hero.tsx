@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Download, Mail, Linkedin, Github, ExternalLink } from 'lucide-react';
-import Cube from './Cube'; // Import the new Cube component
+import Cube from './Cube'; // Import the new Cube components
 
 interface Personal {
   name: string;
