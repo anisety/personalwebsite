@@ -69,7 +69,6 @@ const Hero = ({ personal, stats }: HeroProps) => {
             <p className="hero-summary-text">
               {personal.summary}
             </p>
-
             {/* Stats */}
             <div className="hero-stats-grid">
               <motion.div
