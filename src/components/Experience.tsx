@@ -110,32 +110,6 @@ const Experience = ({ experience }: ExperienceProps) => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="experience-cta-container"
-        >
-          <div className="experience-cta-card">
-            <h3 className="experience-cta-title">
-              Looking for new opportunities
-            </h3>
-            <p className="experience-cta-description">
-              I'm always interested in exciting new projects and opportunities to work with innovative teams.
-            </p>
-            <a
-              href="/#contact"
-              className="experience-cta-button"
-            >
-              Get In Touch
-              <svg className="experience-cta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
