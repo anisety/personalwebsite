@@ -141,8 +141,8 @@ const About = ({ personal, stats }: AboutProps) => {
                   </div>
                   <div className="about-work-info">
                     <div className="about-work-label">Currently working at</div>
-                    <div className="about-company-name">Outlier AI</div>
-                    <div className="about-work-label">AI/ML Engineer</div>
+                    <div className="about-company-name">Algoverse</div>
+                    <div className="about-work-label">Artificial Intelligence Researcher</div>
                   </div>
                 </div>
               </div>
