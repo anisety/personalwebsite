@@ -63,7 +63,7 @@ const Hero = ({ personal, stats }: HeroProps) => {
                   repeat={Infinity}
                 />
               </div>
-              <p className="hero-warning-text">⚠️ Still in building process. Not all buttons are functional yet. Will be ready soon🚀</p>
+              <p className="hero-warning-text"></p>
             </div>
 
             <p className="hero-summary-text">
