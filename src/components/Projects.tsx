@@ -144,7 +144,7 @@ const Projects = ({ projects }: ProjectsProps) => {
           className="experience-cta-container"
         >
           <a
-            href="https://github.com/anishbasety"
+            href="https://github.com/anisety"
             target="_blank"
             rel="noopener noreferrer"
             className="projects-view-all-button"
