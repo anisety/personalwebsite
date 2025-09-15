@@ -20,13 +20,16 @@ const Navbar = () => {
   const handleScrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
+      console.log(`Scrolling to element with ID: ${id}`);
       element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log(`Element with ID: ${id} not found.`);
     }
     setIsOpen(false); // Close mobile menu after clicking a link
   };
 
   const navItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/#hero' },
     { name: 'Skills', href: '/#skills' },
     { name: 'Experience', href: '/#experience' },
     { name: 'Projects', href: '/#projects' },
@@ -35,10 +38,10 @@ const Navbar = () => {
   ];
 
   const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/';
+    if (href === '/#hero') {
+      return location.pathname === '/' || location.hash === '#hero';
     }
-    return location.pathname === href || location.hash === href.split('#')[1];
+    return location.hash === href;
   };
 
   return (
