@@ -138,6 +138,10 @@ const Education = ({ education, awards }: EducationProps) => {
               <div className="education-stat-number-green">7</div>
               <div className="about-stat-label">Relevant Courses</div>
             </div>
+            <div>
+              <div className="education-stat-number-purple">5+ Years</div>
+              <div className="about-stat-label">Work Experience</div>
+            </div>
           </div>
         </motion.div>
       </div>
