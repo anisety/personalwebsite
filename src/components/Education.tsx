@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 interface Education {
   university: string;
   degree: string;
-  graduationDate: string;
   gpa: string;
   relevantCoursework: string[];
 }
@@ -63,7 +62,6 @@ const Education = ({ education, awards }: EducationProps) => {
                 <h4 className="education-university">{education.university}</h4>
                 <p className="education-degree">{education.degree}</p>
                 <div className="education-meta">
-                  <span>Expected Graduation: {education.graduationDate}</span>
                   <span className="education-gpa">GPA: {education.gpa}</span>
                 </div>
               </div>
@@ -135,10 +133,6 @@ const Education = ({ education, awards }: EducationProps) => {
             <div>
               <div className="education-stat-number-blue">4.0</div>
               <div className="about-stat-label">GPA</div>
-            </div>
-            <div>
-              <div className="education-stat-number-purple">2027</div>
-              <div className="about-stat-label">Graduation Year</div>
             </div>
             <div>
               <div className="education-stat-number-green">7</div>
