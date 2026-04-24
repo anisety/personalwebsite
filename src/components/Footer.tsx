@@ -7,6 +7,7 @@ interface FooterProps {
     github: string;
     linkedin: string;
     website: string;
+    location: string;
   };
 }
 
@@ -74,6 +75,11 @@ const Footer = ({ personal }: FooterProps) => {
             <h4 className="footer-links-title">Quick Links</h4>
             <ul className="footer-links-list">
               <li>
+                <a href="#hero" className="footer-social-link">
+                  Home
+                </a>
+              </li>
+              <li>
                 <a href="#about" className="footer-social-link">
                   About
                 </a>
@@ -91,6 +97,11 @@ const Footer = ({ personal }: FooterProps) => {
               <li>
                 <a href="#projects" className="footer-social-link">
                   Projects
+                </a>
+              </li>
+              <li>
+                <a href="#systems" className="footer-social-link">
+                  Systems
                 </a>
               </li>
               <li>
@@ -129,7 +140,7 @@ const Footer = ({ personal }: FooterProps) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="footer-contact-text">Champaign, IL</span>
+                <span className="footer-contact-text">{personal.location}</span>
               </div>
               <div className="footer-contact-item">
                 <svg className="footer-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">

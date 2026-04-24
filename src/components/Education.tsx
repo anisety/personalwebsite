@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import TerminalPaneLabel from './TerminalPaneLabel';
 
 interface Education {
   university: string;
@@ -15,11 +16,12 @@ interface Award {
 }
 
 interface EducationProps {
+  paneLabel: string;
   education: Education;
   awards: Award[];
 }
 
-const Education = ({ education, awards }: EducationProps) => {
+const Education = ({ education, awards, paneLabel }: EducationProps) => {
   return (
     <section id="education" className="education-section">
       <div className="about-container">
@@ -30,6 +32,7 @@ const Education = ({ education, awards }: EducationProps) => {
           viewport={{ once: true }}
           className="about-title-container"
         >
+          <TerminalPaneLabel code={paneLabel} align="center" />
           <h2 className="about-title">Education & Awards</h2>
           <div className="about-title-underline"></div>
           <p className="education-subtitle">

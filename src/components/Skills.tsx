@@ -1,36 +1,50 @@
 import { motion } from 'framer-motion';
+import { useMemo } from 'react';
+import TerminalPaneLabel from './TerminalPaneLabel';
 
-interface Skill {
-  name: string;
-  proficiency: number;
+interface TerminalSkills {
+  languages: string[];
+  systemsArchitecture: string[];
+  dataQuant: string[];
+  toolsPlatforms: string[];
 }
 
 interface SkillsProps {
-  skills: {
-    languages: Skill[];
-    frameworks: Skill[];
-    developerTools: Skill[];
-    librariesTools: Skill[];
-  };
+  paneLabel: string;
+  terminalSkills: TerminalSkills;
 }
 
-const Skills = ({ skills }: SkillsProps) => {
-  const skillCategories = [
-    { title: 'Programming Languages', skills: skills.languages, color: 'blue' },
-    { title: 'Frameworks & Libraries', skills: skills.frameworks, color: 'purple' },
-    { title: 'Developer Tools', skills: skills.developerTools, color: 'green' },
-    { title: 'Libraries & Tools', skills: skills.librariesTools, color: 'orange' },
-  ];
+type ScreenerRow = {
+  symbol: string;
+  last: string;
+  change: number;
+};
 
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: 'skill-bar-blue',
-      purple: 'skill-bar-purple',
-      green: 'skill-bar-green',
-      orange: 'skill-bar-orange',
-    };
-    return colors[color as keyof typeof colors] || 'skill-bar-blue';
-  };
+function pseudoChange(symbol: string): number {
+  // deterministic per symbol; keeps UI stable between renders
+  let h = 0;
+  for (let i = 0; i < symbol.length; i++) h = (h * 31 + symbol.charCodeAt(i)) >>> 0;
+  const r = (h % 420) / 100 - 2.1; // [-2.1, +2.09]
+  return Math.round(r * 10) / 10; // 0.1 precision
+}
+
+const Skills = ({ terminalSkills, paneLabel }: SkillsProps) => {
+  const rows = useMemo<ScreenerRow[]>(() => {
+    const categories: Array<{ label: string; items: string[] }> = [
+      { label: 'Languages', items: terminalSkills.languages },
+      { label: 'Systems & Architecture', items: terminalSkills.systemsArchitecture },
+      { label: 'Data & Quant', items: terminalSkills.dataQuant },
+      { label: 'Tools & Platforms', items: terminalSkills.toolsPlatforms },
+    ];
+
+    return categories.flatMap((c) =>
+      c.items.map((symbol) => ({
+        symbol,
+        last: c.label,
+        change: pseudoChange(symbol),
+      })),
+    );
+  }, [terminalSkills]);
 
   return (
     <section id="skills" className="skills-section-new">
@@ -42,99 +56,39 @@ const Skills = ({ skills }: SkillsProps) => {
           viewport={{ once: true }}
           className="about-title-container"
         >
-          <h2 className="about-title">Skills & Technologies</h2>
+          <TerminalPaneLabel code={paneLabel} align="center" />
+          <h2 className="about-title">Key Stats &amp; Screener</h2>
           <div className="about-title-underline"></div>
-          <p className="skills-subtitle">
-            Here are the technologies and tools I work with to bring ideas to life
-          </p>
+          <p className="skills-subtitle">Symbol · Last · Change</p>
         </motion.div>
 
-        <div className="skills-main-grid">
-          {skillCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-              viewport={{ once: true }}
-              className="skill-category-card"
-            >
-              <h3 className="skill-category-title-new">{category.title}</h3>
-              <div className="skill-list-wrapper">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: skillIndex * 0.1 }}
-                    viewport={{ once: true }}
-                    className="skill-item"
-                  >
-                    <div className="skill-item-header">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-proficiency">{skill.proficiency}%</span>
-                    </div>
-                    <div className="skill-progress-bar-bg">
-                      <motion.div
-                        className={`skill-progress-bar-fill ${getColorClasses(category.color)}`}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.proficiency}%` }}
-                        transition={{ duration: 1, delay: skillIndex * 0.1 }}
-                        viewport={{ once: true }}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Additional Skills Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="additional-skills-container"
-        >
-          <h3 className="additional-skills-title">Areas of Expertise</h3>
-          <div className="additional-skills-grid">
-            <div className="expertise-item">
-              <div className="expertise-icon-container-blue">
-                <svg className="expertise-icon-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h4 className="expertise-title">Full-Stack Development</h4>
-              <p className="expertise-description">
-                Building scalable web applications with modern frameworks and best practices
-              </p>
-            </div>
-            <div className="expertise-item">
-              <div className="expertise-icon-container-purple">
-                <svg className="expertise-icon-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h4 className="expertise-title">AI/ML Engineering</h4>
-              <p className="expertise-description">
-                Developing intelligent systems and optimizing machine learning pipelines
-              </p>
-            </div>
-            <div className="expertise-item">
-              <div className="expertise-icon-container-green">
-                <svg className="expertise-icon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h4 className="expertise-title">System Architecture</h4>
-              <p className="expertise-description">
-                Designing scalable and efficient system architectures for complex applications
-              </p>
-            </div>
+        <div className="terminal-widget terminal-widget--screener terminal-pane">
+          <div className="terminal-widget__header">
+            <span className="terminal-widget__title">SCREENER</span>
+            <span className="terminal-widget__meta">Multi-market</span>
           </div>
-        </motion.div>
+
+          <div className="terminal-widget__body terminal-widget__body--scroll">
+            <div className="screener-grid screener-grid--head" role="row">
+              <div className="screener-cell screener-cell--muted">Symbol</div>
+              <div className="screener-cell screener-cell--muted">Last</div>
+              <div className="screener-cell screener-cell--muted screener-cell--right">Change</div>
+            </div>
+
+            {rows.map((r) => (
+              <div key={r.symbol} className="screener-grid" role="row">
+                <div className="screener-cell screener-cell--sym">{r.symbol}</div>
+                <div className="screener-cell screener-cell--last">{r.last}</div>
+                <div
+                  className={`screener-cell screener-cell--right ${r.change >= 0 ? 'screener-cell--up' : 'screener-cell--down'}`}
+                >
+                  {r.change >= 0 ? '▲' : '▼'} {r.change >= 0 ? '+' : ''}
+                  {r.change.toFixed(1)}%
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

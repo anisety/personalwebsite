@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import TerminalPaneLabel from './TerminalPaneLabel';
 
 interface ContactProps {
+  paneLabel: string;
   personal: {
     name: string;
     email: string;
+    phone: string;
     location: string;
     github: string;
     linkedin: string;
@@ -12,7 +15,7 @@ interface ContactProps {
   };
 }
 
-const Contact = ({ personal }: ContactProps) => {
+const Contact = ({ personal, paneLabel }: ContactProps) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -46,6 +49,7 @@ const Contact = ({ personal }: ContactProps) => {
           viewport={{ once: true }}
           className="about-title-container"
         >
+          <TerminalPaneLabel code={paneLabel} align="center" />
           <h2 className="about-title">Get In Touch</h2>
           <div className="about-title-underline"></div>
           <p className="contact-subtitle">
@@ -163,6 +167,25 @@ const Contact = ({ personal }: ContactProps) => {
                   <h4 className="contact-detail-title">Email</h4>
                   <a href={`mailto:${personal.email}`} className="about-email-link">
                     {personal.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="contact-detail-item">
+                <div className="contact-icon-container-green">
+                  <svg className="contact-detail-icon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="contact-detail-title">Phone</h4>
+                  <a href={`tel:${personal.phone.replace(/\s/g, '')}`} className="about-email-link">
+                    {personal.phone}
                   </a>
                 </div>
               </div>

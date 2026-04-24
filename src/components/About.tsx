@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import TerminalPaneLabel from './TerminalPaneLabel';
 
 interface AboutProps {
+  paneLabel: string;
   personal: {
     name: string;
     title: string;
@@ -19,7 +21,7 @@ interface AboutProps {
   };
 }
 
-const About = ({ personal, stats }: AboutProps) => {
+const About = ({ personal, stats, paneLabel }: AboutProps) => {
   return (
     <section id="about" className="about-section">
       <div className="about-container">
@@ -30,6 +32,7 @@ const About = ({ personal, stats }: AboutProps) => {
           viewport={{ once: true }}
           className="about-title-container"
         >
+          <TerminalPaneLabel code={paneLabel} align="center" />
           <h2 className="about-title">About Me</h2>
           <div className="about-title-underline"></div>
         </motion.div>
@@ -123,7 +126,7 @@ const About = ({ personal, stats }: AboutProps) => {
             </div>
           </motion.div>
 
-          {/* Right Column - Visual Element */}
+          {/* Right Column - Scroll-safe profile panel (replaces fixed 3D shapes) */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -131,23 +134,58 @@ const About = ({ personal, stats }: AboutProps) => {
             viewport={{ once: true }}
             className="about-right-column"
           >
-            <div className="relative">
-              <div className="about-outer-circle">
-                <div className="about-outer-circle-content">
-                  <div className="about-inner-circle">
-                    <div className="about-initials">
-                      {personal.name.split(' ').map(name => name[0]).join('')}
-                    </div>
+            <div className="terminal-widget terminal-widget--about" aria-label="Profile widget">
+              <div className="terminal-widget__header">
+                <span className="terminal-widget__title">PROFILE</span>
+                <span className="terminal-widget__meta">{personal.location}</span>
+              </div>
+              <div className="terminal-widget__body terminal-widget__body--scroll">
+                <div className="about-work-info">
+                  <div className="about-work-label">Currently working at</div>
+                  <div className="about-company-name">Algoverse</div>
+                  <div className="about-work-label">Artificial Intelligence Researcher</div>
+                </div>
+
+                <div className="terminal-kv">
+                  <div className="terminal-kv__row">
+                    <span className="terminal-kv__k">NAME</span>
+                    <span className="terminal-kv__v">{personal.name}</span>
                   </div>
-                  <div className="about-work-info">
-                    <div className="about-work-label">Currently working at</div>
-                    <div className="about-company-name">Algoverse</div>
-                    <div className="about-work-label">Artificial Intelligence Researcher</div>
+                  <div className="terminal-kv__row">
+                    <span className="terminal-kv__k">TITLE</span>
+                    <span className="terminal-kv__v">{personal.title}</span>
+                  </div>
+                  <div className="terminal-kv__row">
+                    <span className="terminal-kv__k">EMAIL</span>
+                    <span className="terminal-kv__v">{personal.email}</span>
+                  </div>
+                </div>
+
+                <div className="terminal-sep" />
+
+                <div className="terminal-kv">
+                  <div className="terminal-kv__row">
+                    <span className="terminal-kv__k">YRS</span>
+                    <span className="terminal-kv__v">{stats.yearsExperience}+</span>
+                  </div>
+                  <div className="terminal-kv__row">
+                    <span className="terminal-kv__k">PROJ</span>
+                    <span className="terminal-kv__v">{stats.projectsCompleted}+</span>
+                  </div>
+                  <div className="terminal-kv__row">
+                    <span className="terminal-kv__k">OSS</span>
+                    <span className="terminal-kv__v">{stats.openSourceContributions}+</span>
+                  </div>
+                  <div className="terminal-kv__row">
+                    <span className="terminal-kv__k">HACK</span>
+                    <span className="terminal-kv__v">{stats.hackathonsWon}+</span>
                   </div>
                 </div>
               </div>
-              <div className="about-decorative-circle-top-right"></div>
-              <div className="about-decorative-circle-bottom-left"></div>
+              <div className="terminal-widget__footer">
+                <span className="terminal-chip terminal-chip--active">OVRFLW SAFE</span>
+                <span className="terminal-chip">RESPONSIVE</span>
+              </div>
             </div>
           </motion.div>
         </div>

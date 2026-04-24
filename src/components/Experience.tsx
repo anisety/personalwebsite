@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import TerminalPaneLabel from './TerminalPaneLabel';
 
 interface Experience {
   position: string;
@@ -12,10 +13,11 @@ interface Experience {
 }
 
 interface ExperienceProps {
+  paneLabel: string;
   experience: Experience[];
 }
 
-const Experience = ({ experience }: ExperienceProps) => {
+const Experience = ({ experience, paneLabel }: ExperienceProps) => {
   return (
     <section id="experience" className="experience-section">
       <div className="about-container">
@@ -26,94 +28,65 @@ const Experience = ({ experience }: ExperienceProps) => {
           viewport={{ once: true }}
           className="about-title-container"
         >
-          <h2 className="about-title">Work Experience</h2>
-          <div className="about-title-underline"></div>
+          <TerminalPaneLabel code={paneLabel} align="center" />
+          <h2 className="about-title">Experience</h2>
+          <div className="about-title-underline" />
           <p className="experience-subtitle">
-            My professional journey in software engineering and AI/ML
+            Time of Sales / Active Positions
           </p>
         </motion.div>
 
-        <div className="experience-timeline-container">
-          {/* Timeline Line */}
-          <div className="experience-timeline-line"></div>
+        <div className="terminal-widget terminal-widget--tape terminal-pane">
+          <div className="terminal-widget__header">
+            <span className="terminal-widget__title">T&amp;S</span>
+            <span className="terminal-widget__meta">Blotter</span>
+          </div>
 
-          <div className="experience-items-wrapper">
+          <div className="terminal-widget__body terminal-widget__body--scroll">
+            <div className="tape-grid tape-grid--head" role="row">
+              <div className="tape-cell tape-cell--muted">Time</div>
+              <div className="tape-cell tape-cell--muted">Symbol</div>
+              <div className="tape-cell tape-cell--muted">Action</div>
+              <div className="tape-cell tape-cell--muted">Size/Details</div>
+            </div>
+
             {experience.map((job, index) => (
               <motion.div
-                key={`${job.company}-${job.startDate}`}
-                initial={{ opacity: 0, y: 50 }}
+                key={`${job.company}-${job.startDate}-${job.position}`}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                transition={{ duration: 0.35, delay: Math.min(index * 0.02, 0.25) }}
                 viewport={{ once: true }}
-                className={`experience-item ${index % 2 === 0 ? 'experience-item-row' : 'experience-item-row-reverse'}`}
+                className="tape-grid"
+                role="row"
               >
-                {/* Timeline Dot */}
-                <div className="experience-timeline-dot"></div>
-
-                {/* Content Card */}
-                <div className={`experience-content-wrapper ${index % 2 === 0 ? 'experience-content-wrapper-left' : 'experience-content-wrapper-right'}`}>
-                  <div className="experience-card">
-                    {/* Header */}
-                    <div className="experience-card-header">
-                      <div className="experience-card-header-top">
-                        <h3 className="experience-position">{job.position}</h3>
-                        <span className="experience-company">{job.company}</span>
-                      </div>
-                      <div className="experience-location">
-                        <svg className="experience-location-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        {job.location}
-                      </div>
-                      <div className="experience-date">
-                        {job.startDate} - {job.endDate}
-                      </div>
+                <div className="tape-cell tape-cell--time">
+                  {job.startDate} - {job.endDate}
+                </div>
+                <div className="tape-cell tape-cell--sym">{job.company}</div>
+                <div className="tape-cell tape-cell--action">{job.position}</div>
+                <div className="tape-cell tape-cell--details">
+                  <div className="tape-cell__desc">{job.description}</div>
+                  {job.location?.trim() ? (
+                    <div className="tape-cell__loc">{job.location}</div>
+                  ) : null}
+                  {job.technologies.length > 0 ? (
+                    <div className="tape-tags">
+                      {job.technologies.map((t) => (
+                        <span key={t} className="tape-tag">
+                          {t}
+                        </span>
+                      ))}
                     </div>
-
-                    {/* Description */}
-                    <p className="experience-description">
-                      {job.description}
-                    </p>
-
-                    {/* Achievements */}
-                    <div className="experience-achievements-container">
-                      <h4 className="experience-achievements-title">Key Achievements:</h4>
-                      <ul className="experience-achievements-list">
-                        {job.achievements.map((achievement, achievementIndex) => (
-                          <li key={achievementIndex} className="experience-achievement-item">
-                            <span className="experience-achievement-bullet">•</span>
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Technologies */}
-                    <div>
-                      <h4 className="experience-technologies-title">Technologies:</h4>
-                      <div className="experience-technologies-list">
-                        {job.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="experience-tech-tag"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                  ) : null}
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
 };
 
 export default Experience;
-//Edit Work Experience

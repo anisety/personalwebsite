@@ -13,6 +13,26 @@
   },
   "experience": [
     {
+      "position": "Software Engineer Intern",
+      "company": "Bloomberg",
+      "location": "",
+      "startDate": "Jan 2026",
+      "endDate": "Present · 4 mos",
+      "description": "Summer 2026 incoming on electronic trading team",
+      "achievements": [],
+      "technologies": []
+    },
+    {
+      "position": "Winter Defense Tech Fellowship",
+      "company": "Palantir Technologies",
+      "location": "",
+      "startDate": "Dec 2025",
+      "endDate": "Jan 2026 · 2 mos",
+      "description": "Foundry",
+      "achievements": [],
+      "technologies": []
+    },
+    {
       "position": "Artificial Intelligence Researcher",
       "company": "Algoverse",
       "location": "Remote",
@@ -146,6 +166,36 @@
         "Expanded outreach programs, increasing community engagement by 30%."
       ],
       "technologies": ["Operations Management", "Strategic Planning", "Project Management", "Team Leadership", "Non-profit Management", "Environmental Advocacy"]
+    }
+  ],
+  "systemsTradingProjects": [
+    {
+      "slug": "LLOB",
+      "title": "LLOB",
+      "tags": ["C++", "Updated last month"],
+      "url": "https://github.com/anisety/LLOB",
+      "animation": "lob"
+    },
+    {
+      "slug": "Lock-Free-NASDAQ-ITCH-Feed-Handler",
+      "title": "Lock-Free-NASDAQ-ITCH-Feed-Handler",
+      "tags": ["Makefile", "Updated last month"],
+      "url": "https://github.com/anisety/Lock-Free-NASDAQ-ITCH-Feed-Handler",
+      "animation": "feed"
+    },
+    {
+      "slug": "Custom-Arena-Memory-Allocator",
+      "title": "Custom-Arena-Memory-Allocator",
+      "tags": ["Makefile", "Updated last month"],
+      "url": "https://github.com/anisety/Custom-Arena-Memory-Allocator",
+      "animation": "arena"
+    },
+    {
+      "slug": "Zero-Allocation-High-Frequency-Backtester",
+      "title": "Zero-Allocation-High-Frequency-Backtester",
+      "tags": [],
+      "url": "https://github.com/anisety/Zero-Allocation-High-Frequency-Backtester",
+      "animation": "backtester"
     }
   ],
   "projects": [
@@ -419,6 +469,7 @@
   "education": {
     "university": "University of Illinois Urbana-Champaign",
     "degree": "B.S. Computer Science & Mathematics",
+    "graduationDate": "Expected May 2028",
     "gpa": "4.0/4.0",
     "relevantCoursework": [
       "Data Structures and Algorithms",
@@ -455,5 +506,116 @@
     "projectsCompleted": 15,
     "openSourceContributions": 25,
     "hackathonsWon": 3
+  },
+  "terminalSkills": {
+    "languages": [
+      "Modern C++ (11/14/17/20)",
+      "Python",
+      "Rust",
+      "Go",
+      "Java",
+      "SQL",
+      "JavaScript",
+      "Kotlin",
+      "Hack",
+      "PHP",
+      "GraphQL",
+      "React"
+    ],
+    "systemsArchitecture": [
+      "Distributed Systems",
+      "Microservices",
+      "Scalable Backend Design",
+      "Concurrent Programming",
+      "HPC"
+    ],
+    "dataQuant": [
+      "Data Engineering",
+      "Large Scale Data Pipelines",
+      "PyTorch",
+      "Pandas",
+      "Scikit Learn"
+    ],
+    "toolsPlatforms": [
+      "Valgrind",
+      "GDB",
+      "Perf",
+      "CMake",
+      "Linux OS Internals",
+      "Docker",
+      "Kubernetes",
+      "Bazel",
+      "Protobuf",
+      "gRPC"
+    ]
+  },
+  "projectsResearchTerminal": [
+    {
+      "title": "Market Microstructure Limit Order Book",
+      "tech": "C++20, Catch2, CMake",
+      "date": "April 2026",
+      "details": "Built a matching engine to simulate Marketplace interactions, processing buyer and seller events with deterministic, sub-5 microsecond latency. Minimized CPU cache misses by 80% using contiguous memory pools."
+    },
+    {
+      "title": "Historical Market Data Parser",
+      "tech": "C++, UDP Multicast, Linux",
+      "date": "March 2026",
+      "details": "Created a low-latency parser decoding GraphQL and Thrift multicast streams at 10+ million updates/sec. Designed lock-free concurrent pipelines with atomics."
+    },
+    {
+      "title": "Systematic Trading Backtester",
+      "tech": "Python, Pybind11, C++20, Pandas",
+      "date": "February 2026",
+      "details": "Developed an event-driven framework to evaluate systematic ranking algorithms. Engineered a C++ core bridged with Pybind11 executing logic 10x faster than standard Python."
+    },
+    {
+      "title": "SafeLens AI Pipeline",
+      "tech": "C++, CUDA",
+      "date": "December 2025",
+      "details": "Developed a high-throughput computer vision pipeline using PyTorch and CUDA, optimizing GPU memory bandwidth to accelerate inference speeds by 300%."
+    },
+    {
+      "title": "Predictive NCAA Tournament Model",
+      "tech": "Python, Scikit Learn, Statistical Analysis",
+      "date": "November 2025",
+      "details": "Designed a predictive model analyzing 5+ Terabytes of historical user data. Extracted anomalies boosting prediction accuracy by 22%."
+    }
+  ],
+  "honorsActivitiesTerminal": {
+    "honors": [
+      "Accepted to NeurIPS 2025 ”Pro Moral Bench”"
+    ],
+    "activities": [
+      {
+        "name": "UIUC Google Developer Student Club (GDSC)",
+        "role": "Technical Lead",
+        "location": "Urbana, IL",
+        "dates": "Aug 2024 – Present"
+      },
+      {
+        "name": "ACM @ UIUC – SIGma (Systems & Infrastructure Group)",
+        "role": "Active Member",
+        "location": "Urbana, IL",
+        "dates": "Aug 2024 – Present"
+      },
+      {
+        "name": "UIUC Algorithmic Trading Club",
+        "role": "Quantitative Researcher",
+        "location": "",
+        "dates": "Jan 2025 – Present"
+      }
+    ]
+  },
+  "paneLabels": {
+    "hero": "MKTX:AB · DESK — SESSION LIVE",
+    "heroCube": "AB.VOL — 3D ROUTER",
+    "about": "AB.PRO · PROFILE",
+    "skills": "SKLS · STACK DEPTH",
+    "experience": "EXCH · EXEC LEDGER",
+    "projects": "PORT · FEATURED BOOK",
+    "systems": "SYS · LOW-LAT FEEDS",
+    "education": "ACAD · TRANSCRIPT",
+    "contact": "MSG · INBOX",
+    "alerts": "WLST · ALERTS"
   }
 }

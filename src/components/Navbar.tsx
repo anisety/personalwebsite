@@ -30,18 +30,21 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', href: '/#hero' },
+    { name: 'About', href: '/#about' },
     { name: 'Skills', href: '/#skills' },
     { name: 'Experience', href: '/#experience' },
     { name: 'Projects', href: '/#projects' },
+    { name: 'Systems', href: '/#systems' },
     { name: 'Education', href: '/#education' },
     { name: 'Contact', href: '/#contact' },
   ];
 
   const isActive = (href: string) => {
+    const hash = href.startsWith('/#') ? href.slice(1) : href;
     if (href === '/#hero') {
-      return location.pathname === '/' || location.hash === '#hero';
+      return location.pathname === '/' && (location.hash === '' || location.hash === '#/' || location.hash === '#hero');
     }
-    return location.hash === href;
+    return location.hash === hash;
   };
 
   return (
