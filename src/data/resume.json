@@ -37,7 +37,7 @@
       "company": "Algoverse",
       "location": "Remote",
       "startDate": "June 2025",
-      "endDate": "Present",
+      "endDate": "November 2025",
       "description": "Conducting advanced research in artificial intelligence, focusing on novel algorithms and machine learning applications.",
       "achievements": [
         "Developed and optimized AI models for natural language processing tasks, achieving state-of-the-art results",
@@ -48,11 +48,11 @@
       "technologies": ["Python", "TensorFlow", "PyTorch", "NLP", "Generative AI", "Deep Learning"]
     },
     {
-      "position": "AI/ML Developer and Evaluator",
-      "company": "Outlier",
+      "position": "Large Language Model Quality Analyst",
+      "company": "Scale AI",
       "location": "Remote",
-      "startDate": "November 2024",
-      "endDate": "Present",
+      "startDate": "August 2024",
+      "endDate": "December 2024",
       "description": "Developing and evaluating AI/ML models for various applications, with a focus on large language models and API testing.",
       "achievements": [
         "Developed robust API testing frameworks for AI models, ensuring high reliability and performance",
@@ -224,7 +224,7 @@
       "role": "Researcher",
       "category": "Research",
       "startDate": "June 2025",
-      "endDate": "Present",
+      "endDate": "November 2025",
       "achievements": [
         "Replicated a study on Uncertainty Estimation using Kullback-Leibler (KL) Divergence in machine learning models.",
         "Analyzed and interpreted complex machine learning model uncertainties.",
@@ -484,8 +484,8 @@
   "awards": [
     {
       "title": "Dean's List",
-      "organization": "University of Wisconsin-Madison",
-      "date": "Fall 2024, Spring 2025",
+      "organization": "University of Illinois Urbana-Champaign",
+      "date": "Fall 2025",
       "description": "Academic excellence recognition for maintaining high GPA"
     },
     {

@@ -594,8 +594,6 @@ body:has(.site-terminal) {
 }
 
 .screener-grid--head {
-  position: sticky;
-  top: 0;
   background: #000;
   z-index: 1;
 }
@@ -647,8 +645,6 @@ body:has(.site-terminal) {
 }
 
 .tape-grid--head {
-  position: sticky;
-  top: 0;
   background: #000;
   z-index: 1;
 }
@@ -720,8 +716,6 @@ body:has(.site-terminal) {
 }
 
 .ob-grid--head {
-  position: sticky;
-  top: 0;
   background: #000;
   z-index: 1;
 }
@@ -861,8 +855,6 @@ body:has(.site-terminal) {
 }
 
 .watch-grid--head {
-  position: sticky;
-  top: 0;
   background: #000;
   z-index: 1;
 }
@@ -1804,7 +1796,7 @@ body,
   border-bottom: 1px solid rgba(26, 31, 38, 0.6);
   font-size: 12px;
 }
-.row.head { position: sticky; top: 0; background: #05070a; z-index: 2; color: var(--tm-muted); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+.row.head { background: #05070a; z-index: 2; color: var(--tm-muted); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
 .row.head {
   z-index: 100;
   background-color: #0b0e14;
@@ -1812,7 +1804,10 @@ body,
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
 }
-.row span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row span {
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
 .row .up { color: var(--tm-green); }
 .row .down { color: var(--tm-red); }
 
@@ -1836,8 +1831,6 @@ body,
   gap: 0.6rem;
 }
 .ob-head {
-  position: sticky;
-  top: 0;
   background-color: #0b0e14;
   z-index: 100;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -1983,6 +1976,120 @@ body,
   }
   .center-bottom {
     grid-template-rows: auto auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .spa-header {
+    grid-template-columns: 1fr;
+    padding: 0.8rem 1rem;
+    row-gap: 0.65rem;
+  }
+
+  .spa-header > div {
+    white-space: normal;
+    overflow: visible;
+    min-width: 0;
+  }
+
+  .spa-ticker-track {
+    gap: 0.7rem;
+    font-size: 10px;
+  }
+
+  .spa-grid {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .panel {
+    min-height: auto;
+  }
+
+  .panel-body {
+    padding: 1rem;
+  }
+
+  .panel > h3 {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .chart {
+    min-height: 280px;
+  }
+
+  .about-overlay {
+    position: relative;
+    inset: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .row,
+  .row.four,
+  .ob-head,
+  .ob-row {
+    grid-template-columns: 1fr;
+  }
+
+  .row.head {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .row.head span {
+    display: inline-block;
+    margin-right: 0.75rem;
+    white-space: normal;
+  }
+
+  .feed .trade-print {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .feed .trade-print a {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  .broker-line {
+    grid-template-columns: 1fr;
+  }
+
+  .broker-line span:first-child {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .broker-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .broker-btn {
+    width: 100%;
+  }
+
+  .market-divider {
+    padding: 0 20px;
+  }
+
+  .eq {
+    gap: 3px;
+  }
+
+  .broker-note,
+  .feed-note {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .watch-item {
+    font-size: 11px;
   }
 }
 

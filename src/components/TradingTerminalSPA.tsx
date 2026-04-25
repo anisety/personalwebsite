@@ -82,10 +82,10 @@ const TradingTerminalSPA = ({ data }: Props) => {
     'UIUC Algorithmic Trading Club - Quantitative Researcher',
   ];
   const openSourceFeed = [
-    'https://github.com/anisety/LLOB',
-    'https://github.com/anisety/Lock-Free-NASDAQ-ITCH-Feed-Handler',
-    'https://github.com/anisety/Custom-Arena-Memory-Allocator',
-    'https://github.com/anisety/Zero-Allocation-High-Frequency-Backtester',
+    { label: 'LLOB', url: 'https://github.com/anisety/LLOB' },
+    { label: 'Lock-Free NASDAQ ITCH Feed Handler', url: 'https://github.com/anisety/Lock-Free-NASDAQ-ITCH-Feed-Handler' },
+    { label: 'Custom Arena Memory Allocator', url: 'https://github.com/anisety/Custom-Arena-Memory-Allocator' },
+    { label: 'Zero-Allocation High-Frequency Backtester', url: 'https://github.com/anisety/Zero-Allocation-High-Frequency-Backtester' },
   ];
 
   const statTicker = [
@@ -198,10 +198,6 @@ const TradingTerminalSPA = ({ data }: Props) => {
                 <svg viewBox="0 0 24 24" aria-hidden><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.9-2 4-2 4.2 0 5 2.8 5 6.4V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9S15 14.2 15 15.6V21h-5V9Z"/></svg>
                 <span>LinkedIn</span>
               </a>
-              <a href={data.personal.website} target="_blank" rel="noreferrer" className="broker-btn">
-                <svg viewBox="0 0 24 24" aria-hidden><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.8"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" fill="none" stroke="currentColor" strokeWidth="1.4"/></svg>
-                <span>Website</span>
-              </a>
             </div>
             <p className="broker-note">
               I&apos;m currently open to new opportunities and collaborations. Whether you have a project in mind,
@@ -229,10 +225,11 @@ const TradingTerminalSPA = ({ data }: Props) => {
           <section className="panel time-sales">
             <h3>Time of Sales (Open Source)</h3>
             <div className="panel-body feed">
-              {[...openSourceFeed, ...openSourceFeed].map((url, i) => (
-                <div key={`${url}-${i}`} className="trade-print">
+              <p className="feed-note">Current things to buy/sell — my recent projects I’m working on. I am currently working on the Predictive NCAA Tournament Model.</p>
+              {openSourceFeed.map((item, i) => (
+                <div key={`${item.url}-${i}`} className="trade-print">
                   <span className={i % 2 === 0 ? 'up' : 'down'}>{i % 2 === 0 ? 'BUY' : 'SELL'}</span>
-                  <a href={url} target="_blank" rel="noreferrer">{url}</a>
+                  <a href={item.url} target="_blank" rel="noreferrer">{item.label}</a>
                 </div>
               ))}
             </div>
